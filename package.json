@@ -1,0 +1,32 @@
+{
+  "name": "adscore-signature-cloudflare-worker",
+  "version": "2.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js && node ./scripts/pull-variables.js",
+    "dev": "npm run build && node seed-variables.js",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261019.1",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/libsodium-wrappers": "^0.7.14",
+    "rollup": "^4.64.10",
+    "typescript": "^5.5.2",
+    "wrangler": "^4.151.2"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^2.8.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "libsodium-wrappers": "^0.8.4",
+    "locutus": "^3.0.36",
+    "tslib": "^2.6.3"
+  },
+  "overrides": {
+    "undici": "^7.30.1"
+  }
+}

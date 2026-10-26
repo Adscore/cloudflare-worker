@@ -1,0 +1,7 @@
+name = "adscore-signature-cloudflare-worker"
+main = "dist/worker.js"
+compatibility_date = "2024-09-23"
+
+
+[build]
+command = "npm run build && node seed-variables.js"
